@@ -1,0 +1,96 @@
+:root{
+    --primary-white: #f2f3f7;
+    --primary-gray: #747e8b;
+    --primary-operator: #111111;
+    --secondary-result: #020202;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrap{
+    width: 100%;
+}
+
+.calculator{
+    width: 320px;
+    padding: 25px;
+    margin: 50px auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 0px 7px -2px #000000; 
+    box-shadow: 1px 0px 7px -2px #000000;
+}
+
+.calculator-view{
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 12px -8px #000000; 
+    box-shadow: 0px 0px 12px -8px #000000;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.number{
+    font-size: 2rem;
+    margin: 5px;
+}
+
+.operation p{
+    color: var(--primary-gray);
+    margin-bottom: 10px;
+}
+
+.result p{
+    color: var(--secondary-result);
+    margin-bottom: 15px;
+}
+
+/* Estilos del cuerpo de la calculadora */
+
+.calculator-body{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.calculator-form{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* buttons */
+
+.btn{
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 2rem;
+    -webkit-box-shadow: 5px 5px 7px -6px #000000; 
+    box-shadow: 5px 5px 7px -6px #000000;
+}
+
+.btn-operator{
+    background-color: var(--secondary-result);
+    color: var(--primary-white);
+}
+
+.delete-icon{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    background: url('../img/delete.png') center/cover no-repeat;
+}
