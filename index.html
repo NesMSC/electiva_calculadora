@@ -16,38 +16,40 @@
             <div class="calculator-view">
                 <div class="numbers">
                     <div class="operation">
-                        <p class="number">12 x 12</p>
+                        <p class="number" id="operation"></p>
                     </div>
                     <div class="result">
-                        <h4 class="number">144</h4>
+                        <h4 class="number" id="result">0</h4>
                     </div>
                 </div>
             </div>
             <div class="calculator-body">
                 <form class="calculator-form">
-                    <button class="btn btn-operator" type="button">C</button>
-                    <button class="btn btn-operator" type="button">%</button>
-                    <button class="btn btn-operator" type="button"><span class="delete-icon"></span></button>
-                    <button class="btn btn-operator" type="button">/</button>
-                    <button class="btn btn-number" type="button">7</button>
-                    <button class="btn btn-number" type="button">8</button>
-                    <button class="btn btn-number" type="button">9</button>
-                    <button class="btn btn-operator" type="button">x</button>
-                    <button class="btn btn-number" type="button">4</button>
-                    <button class="btn btn-number" type="button">5</button>
-                    <button class="btn btn-number" type="button">6</button>
-                    <button class="btn btn-operator" type="button">-</button>
-                    <button class="btn btn-number" type="button">1</button>
-                    <button class="btn btn-number" type="button">2</button>
-                    <button class="btn btn-number" type="button">3</button>
-                    <button class="btn btn-operator" type="button">+</button>
-                    <button class="btn btn-number" type="button">00</button>
-                    <button class="btn btn-number" type="button">0</button>
-                    <button class="btn btn-number" type="button">,</button>
-                    <button class="btn btn-operator" type="button">=</button>
+                    <button onclick="deleteAll()" class="btn btn-operator" type="button">C</button>
+                    <button onclick="writeOperator(' % ')" class="btn btn-operator" type="button">%</button>
+                    <button onclick="deleteItem()" class="btn btn-operator" type="button"><span class="delete-icon"></span></button>
+                    <button onclick="writeOperator(' / ')" class="btn btn-operator" type="button">/</button>
+                    <button onclick="writeOperation('7')" class="btn btn-number" type="button">7</button>
+                    <button onclick="writeOperation('8')" class="btn btn-number" type="button">8</button>
+                    <button onclick="writeOperation('9')" class="btn btn-number" type="button">9</button>
+                    <button onclick="writeOperator(' * ')" class="btn btn-operator" type="button">x</button>
+                    <button onclick="writeOperation('4')" class="btn btn-number" type="button">4</button>
+                    <button onclick="writeOperation('5')" class="btn btn-number" type="button">5</button>
+                    <button onclick="writeOperation('6')" class="btn btn-number" type="button">6</button>
+                    <button onclick="writeOperator(' - ')" class="btn btn-operator" type="button">-</button>
+                    <button onclick="writeOperation('1')" class="btn btn-number" type="button">1</button>
+                    <button onclick="writeOperation('2')" class="btn btn-number" type="button">2</button>
+                    <button onclick="writeOperation('3')" class="btn btn-number" type="button">3</button>
+                    <button onclick="writeOperator(' + ')" class="btn btn-operator" type="button">+</button>
+                    <button onclick="writeOperation('00')" class="btn btn-number" type="button">00</button>
+                    <button onclick="writeOperation('0')" class="btn btn-number" type="button">0</button>
+                    <button onclick="writeOperation('.')" class="btn btn-number" type="button">,</button>
+                    <button onclick="getResult()" class="btn btn-operator" type="button">=</button>
                 </form>
             </div>
         </div>
     </section>
+    <script src="./src/js/calculos.js"></script>
+    <script src="./src/js/main.js"></script>
 </body>
 </html>
